@@ -1,6 +1,5 @@
 from tkinter import *
 from bazooka import *
-from worm import *
 from roquette import *
 
 """                 INTERFACE                 """
@@ -19,6 +18,7 @@ ground.pack(side=BOTTOM)
 
 armeJoueur1 = Bazooka(terrainDeJeu, 50, 175)
 armeJoueur2 = Bazooka(terrainDeJeu, 800, 175)
+
 
 sliderReglageAngleJ1 =Scale(fenetre, label='hausse', from_=90, to=0, length = 100 , command=armeJoueur1.orienter)
 sliderReglageAngleJ1.pack(side=LEFT, pady =0, padx =10)
