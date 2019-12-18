@@ -31,8 +31,13 @@ sliderReglageAngleJ2.set(125)
 buttonFireJ1 = Button(fenetre, text="FEUUUUUUUU !!!", command=armeJoueur1.tir,padx = 0, pady = 40, height=1, width= 20)
 buttonFireJ1.pack(side=LEFT, pady =20, padx =10)
 
+buttonDeleteJ1 = Button(fenetre, text="Delete", command=armeJoueur1.Destroy,padx = 0, pady = 40, height=1, width= 20)
+buttonDeleteJ1.pack(side=LEFT, pady =20, padx =10)
+
 buttonFireJ2 = Button(fenetre, text="FEUUUUUUUU !!!", command=armeJoueur2.tir,padx = 0, pady = 40, height=1, width= 20)
 buttonFireJ2.pack(side=RIGHT, pady =20, padx =10)
 
+buttonDeleteJ2 = Button(fenetre, text="Delete", command=armeJoueur2.Destroy,padx = 0, pady = 40, height=1, width= 20)
+buttonDeleteJ2.pack(side=LEFT, pady =20, padx =10)
 
 fenetre.mainloop()

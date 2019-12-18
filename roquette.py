@@ -14,14 +14,14 @@ class roquette(object):
 
         vitesse = 10
         t = 0
-        """
-        while t< 10:
+        
+        while t< 50:
             x = cos(angleRad)*vitesse*t
             y = (1/2)*10*t**2+sin(angleRad)+vitesse*t
             t =t + 1
             print ("x: "+ str(x) + " y: " + str(y))
             sleep(0.1)
-        """
+        
         self.fenetre.coords(self.obu, self.x, self.y, self.x, self.y)
         
        

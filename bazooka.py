@@ -39,4 +39,5 @@ class Bazooka(object):
         self.roquette.tir(self.angle)
         
     def Destroy(self):
+        self.roquetteExist = False
         self.roquette.Destroy()
