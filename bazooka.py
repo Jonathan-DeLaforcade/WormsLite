@@ -25,10 +25,9 @@ class Bazooka(object):
             "choisir l'angle de tir du canon"
             # rem : le paramètre <angle> est reçu en tant que chaîne de car.
             # il faut le traduire en nombre réel, puis convertir en radians :
-            self.angle = int(angle)
-            angle = float(angle)*2*pi/360
-            self.x2 = self.x1 + self.lbu*cos(angle)
-            self.y2 = self.y1 - self.lbu*sin(angle)
+            self.angle = float(angle)*2*pi/360
+            self.x2 = self.x1 + self.lbu*cos(self.angle)
+            self.y2 = self.y1 - self.lbu*sin(self.angle)
             self.fenetre.coords(self.buse, self.x1, self.y1, self.x2, self.y2)
             print("ANGLEOLD: " + str(angle) + " ANGLE NEW: "+ str(self.angle))
     def tir(self):

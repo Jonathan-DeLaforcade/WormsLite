@@ -7,25 +7,28 @@ class roquette(object):
         self.fenetre = fenetre
         self.x = canonX2
         self.y = canonY2
-        self.rayon = 5
+        self.rayon = 10
         self.couleur = couleur
 
         print (" x: "+ str(self.x) + " y: " + str(self.y))
     def tir(self,angle):
-        angleRad = radians(angle)
 
-        vitesse = 10
+        vitesse = 60
         t = 0
-        
+        print("Angle: " + str(angle))
         
         while t< 50:
-            self.x = self.x + (200 - (cos(angleRad)*vitesse*t))
-            self.y = self.y + (200 -((1/2)*10*t**2+sin(angleRad)+vitesse*t))
+            self.y = self.y - (((-1/2)*9.81)*t**2)+sin(angle)
+            self.x = self.x + cos(angle)*vitesse*t
+
+            #self.y -= 5 #hauteur
+            #self.x += 5 #largeur
             t =t + 1
-            print ("angleRad: " + str(angleRad) + "           x: "+ str(self.x) + " y: " + str(self.y))
+            print (" angle: " + str(angle) + "  Largeur: "+ str(self.x) + " Hauteur: " + str(self.y))
+            """self.fenetre.coords(self.obu,self.x-self.rayon/2,self.y-self.rayon/2, self.x+self.rayon/2, self.y+self.rayon/2)"""
+            self.fenetre.create_oval(self.x-self.rayon/2,self.y-self.rayon/2, self.x+self.rayon/2, self.y+self.rayon/2, fill=self.couleur,width = self.rayon)
+            self.fenetre.update()
             sleep(0.1)
-        
-        self.fenetre.coords(self.obu,self.x-self.rayon/2,self.y-self.rayon/2, self.x+self.rayon/2, self.y+self.rayon/2)
         
         
        
