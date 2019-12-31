@@ -7,7 +7,6 @@ class Bazooka(object):
     def __init__(self, fenetre, x, y):
         self.roquetteExist = False
         self.fenetre = fenetre
-        self.angle = 90
         # référence du canevas
         self.x1, self.y1 = x, y
         # axe de rotation du canon
