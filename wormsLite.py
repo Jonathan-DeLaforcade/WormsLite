@@ -2,7 +2,7 @@ from tkinter import *
 from Game import *
 
 fenetre  = Tk()
-fenetre.geometry("1024x480")
+fenetre.geometry("1024x520")
 
 Game = Game(fenetre)
 
